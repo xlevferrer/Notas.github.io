@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bienvenida Morshi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    .quote {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: pink;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #ff66a3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bienvenida Morshi</h1>
+    <p class="quote" id="quote-of-the-day">Carga una frase nueva haciendo clic en el botón.</p>
+    <button class="button" onclick="generateQuote()">Aprietame</button>
+  </div>
+
+  <script>
+    const quotes = [
+      "Toma mucha aguita.",
+      "Agradezco cada dia a DIOSITO por tenerte.",
+      "Soy tu fan numero uno.",
+      "Estoy muy agradecido por todo este tiempo.",
+      "Espero que nunca te canses de mi.",
+      "No veo el dia de convertirte en mi ESPOSA.",
+      "Eres Maravillosa.",
+      "Cada dia que pasa te amo mas.",
+      "Das color a mi vida gris.",
+      "Te amo mas que el primer dia.",
+      "Tienes los ojitos mas hermosos.",
+      "Amo cada parte de ti.",
+      "Eres ese secreto que por egoismo no quiero compartir con nadie.",
+    ];
+
+    function generateQuote() {
+      const quoteElement = document.getElementById("quote-of-the-day");
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      quoteElement.textContent = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
